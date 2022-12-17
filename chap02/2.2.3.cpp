@@ -12,7 +12,7 @@ bool check(int y, int k) {
     return true;
 }
 
-void printSolution() {
+void solution() {
     for (int i = 1; i <= n; i++) {
         std::cout << a[i] << " ";
     }
@@ -26,7 +26,7 @@ void Try(int k) {
             a[k] = y;
             used[y] = 1;
             if (k == n)
-                printSolution();
+                solution();
             else
                 Try(k + 1);
             used[y] = 0;

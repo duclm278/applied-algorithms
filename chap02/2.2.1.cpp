@@ -4,7 +4,7 @@
 int n;
 int a[100];
 
-void printSolution() {
+void solution() {
     for (int i = 1; i <= n; i++) {
         std::cout << a[i] << " ";
     }
@@ -16,7 +16,7 @@ void Try(int k) {
     for (int y = 0; y <= 1; y++) {
         a[k] = y;
         if (k == n)
-            printSolution();
+            solution();
         else
             Try(k + 1);
     }

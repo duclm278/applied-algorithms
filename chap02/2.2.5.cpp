@@ -3,7 +3,7 @@
 int x[100];
 int M, n, M1;
 
-void printSolution() {
+void solution() {
     for (int i = 1; i <= n; i++) {
         std::cout << x[i] << " ";
     }
@@ -17,7 +17,7 @@ void Try(int k) {
         x[k] = y;
         M1 += x[k];
         if (k == n) {
-            if (M1 == M) printSolution();
+            if (M1 == M) solution();
         } else
             Try(k + 1);
         M1 -= x[k];

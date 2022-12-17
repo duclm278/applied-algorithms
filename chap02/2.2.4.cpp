@@ -11,7 +11,7 @@ bool check(int y, int k) {
     return true;
 }
 
-void printSolution() {
+void solution() {
     for (int i = 1; i <= n; i++) {
         std::cout << "(" << i << ", " << a[i] << ") ";
     }
@@ -25,7 +25,7 @@ void Try(int k) {
         if (check(y, k)) {
             a[k] = y;
             if (k == n)
-                printSolution();
+                solution();
             else
                 Try(k + 1);
         }
