@@ -27,17 +27,17 @@ int mergeParts(int left, int mid, int right) {
 
 // Recursively sort array and returns inversion count of array
 int mergeSort(int left, int right) {
-    int mid, inv_count = 0;
+    int mid, invCnt = 0;
     if (right > left) {
         // Divide array into 2 parts and call mergeSort() for each part
         mid = (right + left) / 2;
         // Inversion count is sum of inversions of left-part, right-part and
         // inversions in merging
-        inv_count = (inv_count + mergeSort(left, mid)) % MOD;
-        inv_count = (inv_count + mergeSort(mid + 1, right)) % MOD;
-        inv_count = (inv_count + mergeParts(left, mid, right)) % MOD;
+        invCnt = (invCnt + mergeSort(left, mid)) % MOD;
+        invCnt = (invCnt + mergeSort(mid + 1, right)) % MOD;
+        invCnt = (invCnt + mergeParts(left, mid, right)) % MOD;
     }
-    return inv_count;
+    return invCnt;
 }
 
 int main() {
