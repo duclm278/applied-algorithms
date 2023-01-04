@@ -15,6 +15,14 @@ int maxSum(int i) {
     return mem[i];
 }
 
+// Trace using recursion
+void trace(int i) {
+    if (i != 1 && mem[i] == a[i] + mem[i - 1]) {
+        trace(i - 1);
+    }
+    cout << a[i] << " ";
+}
+
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
@@ -42,9 +50,14 @@ int main() {
         }
     }
 
-    for (; i <= endIndex; i++) {
-        cout << a[i] << " ";
-    }
+    // Trace using loop
+    // for (; i <= endIndex; i++) {
+    //     cout << a[i] << " ";
+    // }
+    // cout << "\n";
+
+    // Trace using recursion
+    trace(endIndex);
     cout << "\n";
 
     return 0;
