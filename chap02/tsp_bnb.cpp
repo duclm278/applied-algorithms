@@ -45,7 +45,6 @@ int main() {
     // freopen("tsp30.txt", "r", stdin);
     std::cin >> n;
 
-    // TODO: Get c[i][j], cmin
     for (int i = 1; i <= n; i++) {
         for (int j = 1; j <= n; j++) {
             cin >> c[i][j];

@@ -1,5 +1,9 @@
 {
   "code-runner.executorMap": {
     "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt.exe && $dir$fileNameWithoutExt.exe"
+  },
+  "files.associations": {
+    "*.tcc": "cpp",
+    "compare": "cpp"
   }
 }

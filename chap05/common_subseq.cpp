@@ -44,14 +44,12 @@ int main() {
     cout << "Found longest length: " << ans << "\n";  // 5
 
     // Trace using loop
-    // TODO: Fix bugs: Loop found \0 5 times => Exit
     cout << "Found common subsequence: ";
     stack<char> s;
     for (int i = m - 1, j = n - 1, k = 0; k < ans;) {
-        if (a[i] == b[j] && mem[i][j] == mem[i - 1][j - 1]) {
+        if (a[i] == b[j] && mem[i][j] == mem[i - 1][j - 1] + 1) {
             s.push(a[i]);
             k++;
-            cout << k;
             i--;
             j--;
             continue;
