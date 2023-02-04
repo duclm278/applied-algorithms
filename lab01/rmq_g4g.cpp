@@ -30,8 +30,8 @@ void preprocess() {
     for (int j = 1; (1 << j) <= n; j++) {
         // Compute minimum value for intervals of size 2^j
         for (int i = 0; i + (1 << j) - 1 < n; i++) {
-            // For [2, 10], compare [2, 9] and [3, 10]
-            // For [2, 10], compare A[M[2][3]] & A[M[3][3]]
+            // For [2, 9], compare [2, 5] and [6, 9]
+            // For [2, 9], compare A[M[2][2]] & A[M[6][2]]
             if (A[M[i][j - 1]] < A[M[i + (1 << (j - 1))][j - 1]]) {
                 M[i][j] = M[i][j - 1];
             } else {
