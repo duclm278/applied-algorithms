@@ -2,11 +2,11 @@
 using namespace std;
 #define N 50
 int n;  // Number of passengers
-int K;  // Capacity of the bus (Number of seats)
+int K;  // Capacity of bus (Number of seats)
 int c[N][N];
 int c_min = INT_MAX;
-int X[N];  // The route of the bus is 0 -> X[1] -> ... -> X[2 * n] -> 0.
-int appeared[N]{};  // True means v has appeared in the partial solution.
+int X[N];           // Route of bus is 0 -> X[1] -> ... -> X[2 * n] -> 0.
+int appeared[N]{};  // True means v has appeared in partial solution.
 int load = 0;       // Currently empty
 int f = 0;
 int f_min = INT_MAX;
@@ -44,7 +44,7 @@ bool check(int v, int k) {
 void Try(int k) {
     for (int v = 1; v <= 2 * n; v++) {
         if (check(v, k)) {
-            X[k] = v;       // Route goes to the point v.
+            X[k] = v;       // Route goes to point v.
             if (v <= n)     // Pickup point
                 load += 1;  // One person gets in.
             else

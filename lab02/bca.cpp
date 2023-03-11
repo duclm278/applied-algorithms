@@ -34,8 +34,10 @@ void input() {
     }
 }
 
+// Check if course k can be assigned to teacher t
 bool check(int t, int k) {
     for (int i = 1; i <= k - 1; i++) {
+        // Failed if course i previously assigned  && course i, k conflict
         if (conflict[i][k] && x[i] == t) return false;
     }
     return true;

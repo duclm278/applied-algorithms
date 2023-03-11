@@ -2,7 +2,7 @@
 using namespace std;
 #define N 20
 int n, M;
-int a[N];
+int a[N];  // a[i] = coefficient of X[i]
 int t[N];  // t[k] = a[1] + ... + a[k]
 int X[N];  // Solution representation
 int f;

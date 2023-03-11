@@ -32,7 +32,7 @@ int mergeSort(int left, int right) {
         // Divide array into 2 parts and call mergeSort() for each part
         mid = (right + left) / 2;
         // Inversion count is sum of inversions of left-part, right-part and
-        // inversions in merging
+        // inversions in merging.
         invCnt = (invCnt + mergeSort(left, mid)) % MOD;
         invCnt = (invCnt + mergeSort(mid + 1, right)) % MOD;
         invCnt = (invCnt + mergeParts(left, mid, right)) % MOD;
